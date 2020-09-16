@@ -1,24 +1,24 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   :root {
-    --hue-neutral: 200;
+    --hue-neutral: 41;
     --hue-wrong: 0;
-    --hue-correct: 145;
+    --hue-correct: 155;
   }
   
   body {
     --hue: var(--hue-neutral);
-    padding: 0;
-    margin: 0;
+    padding: 10;
+    margin: 10;
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: hsl(var(--hue), 100%, 55%);
   }
   
   body.correct {
@@ -30,12 +30,12 @@
   }
   
   .container {
-    width: 800px;
-    max-width: 80%;
+    width: 950px;
+    max-width: 85%;
     background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px 3px;
   }
   
   .btn-grid {
@@ -47,36 +47,42 @@
   
   .btn {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
+    border: 1px solid hsl(var(--hue), 100%, 15%);
+    background-color: hsl(var(--hue), 100%, 60%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: black;
     outline: none;
+    
   }
   
   .btn:hover {
-    border-color: black;
+    border-color: purple;
   }
   
   .btn.correct {
     --hue: var(--hue-correct);
-    color: black;
   }
   
   .btn.wrong {
     --hue: var(--hue-wrong);
   }
   
-  .start-btn, .next-btn {
+  #start-btn, #next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    color: white;
+    background-color: black;
   }
   
   .controls {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .hide {
+    display: none;
   }
   
